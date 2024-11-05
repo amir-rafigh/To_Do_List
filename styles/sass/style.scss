@@ -1,0 +1,424 @@
+@import "mixin";
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+
+}
+body{
+    // width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: gray;
+}
+.container{
+    max-width: 1840px;
+    max-height: 999px;
+    width: 100%;
+    height: 100%;
+    background-color: red;
+    display: grid;
+    grid-template-columns: 20% 80%;
+    text-transform: capitalize;
+
+
+    aside{
+        background-color: #ff4669;
+        display: grid;
+        grid-template-rows: 20% 50% 30%;
+        font-family: "Satisfy", cursive;
+        font-weight: 400;
+        font-style: normal;
+
+
+
+        .top_sidebar{
+            // background-color: purple;
+            text-align: left;
+            padding: 1rem;
+            text-transform: capitalize;
+            h1{
+                padding-top: 1rem;
+                padding-bottom: 0.5rem;
+                text-transform: uppercase;
+                color: #fffafb;
+            }
+            p{
+                
+                color: #fffafb;
+            }
+
+
+        }
+
+
+        ul{
+            // background-color: orange;
+            display: flex;
+            flex-direction: column;
+            justify-content: start;
+            list-style-type: none;
+            color: #ffc3cd;
+            
+            
+            li{
+                // background-color: blue;
+                padding: 1rem;
+                padding-left: 1rem;
+                // margin: 8px;
+                display: flex;
+                align-items: center;
+                flex-direction: row-reverse;
+                justify-content: start;    
+                column-gap: 0.5rem;    
+                user-select: none;
+                @include transition(0.3s);
+                cursor: pointer;
+                
+                
+            }
+            li:hover{
+                background-color: #af0e2b;
+                color: #ffffff;
+                
+                
+            }
+            
+        }
+        .bottom_sidebar{
+            // background-color: lightblue;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            row-gap: 0.5rem;
+
+            
+            p{
+                font-size: 12px;
+                color: #fffafb;
+
+            }
+            button{
+                padding: 0.5rem;
+                text-transform: capitalize;
+                @include border-radius(1rem);
+                outline: none;
+                border: none;
+                background-color: #fffafb;
+                color:#ff4669;
+                font-family: "Satisfy", cursive;
+                font-weight: 700;
+                font-style: normal;
+                cursor: pointer;
+
+
+
+              
+            }
+
+        }
+
+
+
+
+    }
+
+
+
+    main{
+        background-color: green;
+        display: grid;
+        grid-template-rows: 10% 90%;
+
+
+
+        .header_main{
+            background-color: #ffffff;
+            display: grid;
+            grid-template-columns: 20% 50% 30%;
+            cursor: pointer;
+
+
+
+
+            .date{
+                // background-color: yellow;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+
+                input{
+                    width: 90%;
+                    height: 60%;
+                    font-family: "Satisfy", cursive;
+                    border: none;
+                    padding: 0.5rem;
+                    padding-left: 1rem;
+                    @include border-radius(2rem);
+                    color: #f33f60;
+                    font-weight: 700;
+                    background-color: #f5f5f5;
+                    // box-shadow: 0px 0px 20px 0.1px black;
+                    cursor: pointer;
+                    user-select: none;
+                }
+
+            }
+            
+            .input_search{
+                // background-color: red;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                // padding: 1rem;
+                
+                .input_search_width{
+                    width: 100%;
+                    // height: 50px;
+                    height: 60%;
+                    position: relative;
+                    // background-color: #fff;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    
+                    input{
+                        @include border-radius(2rem);
+                        width: 100%;
+                        height: 100%;
+                        background-color: #f5f5f5;
+                        padding: 0.5rem 0;
+                        padding-left: 3rem;
+                        padding-right: 1rem;
+                        border: none;
+                        font-size: 1.5rem;
+                        font-family: "Satisfy", cursive;
+                        outline: none;
+                        cursor: pointer;
+                    }                  
+
+                    span{
+                        position: absolute;
+                        left: 10px;
+                        top: 11px;
+                        font-size: 32px;
+
+                    }
+
+
+                }
+
+
+            }
+            
+            .profile{
+                // background-color: rgb(255, 255, 255);
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+
+                p{
+                    width: 65%;
+                    color: #f33f60;
+                    font-weight: 700;
+                    text-transform: uppercase;
+                    font-family: "Satisfy", cursive;
+                    padding-left: 0.5rem;
+                    // line-height: ;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    column-gap: 0.3rem;
+                    span{
+                        font-size: 2rem;
+                        padding-bottom: 0.3rem;
+                    }
+                    
+                }
+
+                .notification_imgpro{
+                    width: 35%;
+                    height: 100%;
+                    // background-color: green;
+                    display: flex;
+                    justify-content: space-between;
+                    align-items: center;
+                    column-gap: 10px;
+                    padding: 0.5rem;
+
+
+                    span:hover{
+                        color:  orange;
+                    }
+
+                    img{
+                        width: 40px;
+                        height: 40px;
+                        @include border-radius(100%);
+                    }
+                }
+            }
+
+           
+
+
+        }
+
+
+
+
+        .main_main{
+            background-color: #ececec;
+            padding: 2rem;
+            
+            .container_main_main{
+                width: 100%;
+                height: 100%;
+                background-color: #fff;
+                // padding: 1rem;
+            }
+            
+            
+            .ToDoList{
+                // background-color: red;
+                // width: 60%;
+                margin: auto;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                // margin-top: 1rem;
+                height: 10%;
+                // box-shadow: 0 0 10px 1px black;
+                // @include border-radius(1rem);
+                
+                
+                
+                input{
+                    width: 60%;
+                    height: 70%;
+                    border: none;
+                    background-color: #ececec;
+                    @include border-radius_sides( 0 ,1rem ,0rem ,1rem);
+                    padding-left: 1rem;
+                    font-size: 1.5rem;
+                    font-family: "Satisfy", cursive;
+                    outline: none;
+                    border: 2px solid black;
+                    border-right: none;
+                    text-transform: capitalize;
+                }
+                button{
+                    border: 2px solid  black;
+                    border-left: none;
+                    width: 20%;
+                    height: 70%;
+                    background-color: #fff;
+                    @include border-radius_sides(1rem , 0 , 1rem , 0);
+                    text-transform: capitalize;
+                    font-size: 1.5rem;
+                    font-family: "Satisfy", cursive;
+                    outline: none;
+                    cursor: pointer;
+                    @include transition(0.5s)
+                }
+                button:hover{
+                    background-color:  #ff4669;
+                    color: white;
+                }
+            }
+
+            
+            .list_ToDoList{
+                margin: auto;
+                width: 85%;
+                max-height: 80%;
+                overflow-y: auto;
+                height: 100%;
+                // display: flex;
+                // justify-content: center;
+                // align-items: center;
+                margin-top: 1rem;                
+                // background-color: #ececec;
+                @include border-radius(1rem);
+                // padding: 1rem;
+                
+
+
+                ul{
+                    list-style-type: none;
+
+                    li{
+                        position: relative;
+                        border-bottom: 1px solid black;
+                        // margin-bottom: 2rem;
+                        padding: 1rem;
+                        font-size: 1.5rem;
+                        font-weight: 700;
+                        color: #f11840;
+                        // background-color: blue;
+                        width: 100%;
+                        height: 100%;
+                        @include transition(0.3s);
+                    }
+                    li:hover{
+                        background-color: #c7c7c7;
+                    }
+                    .li_done{
+                        text-decoration: line-through;
+                        background-color: rgb(142, 238, 142);
+                    }
+                    .li_done:hover{
+                        background-color: rgb(142, 238, 142);
+                    }
+                    .done::before{
+                        content: "";
+                        width: 8px;
+                        height: 23px;
+                        border-width: 0px 5px 5px 0px;
+                        border-style: solid;
+                        border-color: #2f672f;
+                        display: inline-block;
+                        position: absolute;
+                        bottom: 20px;
+                        right: 45px;
+                        @include transform(45deg);
+                        cursor: pointer;
+                        
+                    }
+                    .done.done_close::before{
+                        display: none;
+                    }
+                    .done.done_close::after{
+                        content: "\e5cd"; /* کد یونیکد آیکون close */
+                        font-family: 'Material Icons'; /* تنظیم فونت به Material Icons */
+                        font-size: 30px; /* اندازه دلخواه */
+                        color: #ff0000; /* رنگ دلخواه برای ضربدر */
+                        display: inline-block;
+                        position: absolute;
+                        bottom: 15px;
+                        right: 45px;
+
+                    }
+                    .fa-trash{
+                        position: absolute;
+                        right: 10px;
+                        color: gray;
+                        @include transition(0.3s);
+                        cursor: pointer;
+                    }
+                    .fa-trash:hover{
+                        color: red;
+                    }
+
+                    
+                }
+              
+
+            }
+        }
+    }
+
+}

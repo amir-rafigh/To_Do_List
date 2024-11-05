@@ -5,10 +5,133 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="ToDoList">
     <meta http-equiv="X-UA-compatible" content="IE=edge">
+    <script src="https://kit.fontawesome.com/542a943e19.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="styles/css/style.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" />
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+     
+
     <title>To-Do-List</title>
 </head>
 <body>
+    <div class="container">
+        <aside class="sidebar">
+
+            <div class="top_sidebar">
+                <h1>to do list</h1>
+                <p>coded by amir-rafigh</p>
+            </div>
+
+
+            <ul>
+                <li>home
+                    <i class="fa-solid fa-house"></i>
+                </li>
+                <li>customer
+                    <span class="material-symbols-outlined">
+                        groups
+                        </span>                      
+                </li>
+                <li>form
+                    <span class="material-symbols-outlined">
+                        description
+                        </span>
+                </li>
+                <li>report
+                    <span class="material-symbols-outlined">
+                        report
+                    </span>
+                </li>
+                <li>user
+                    <span class="material-symbols-outlined">
+                        person
+                    </span>
+                </li>
+                <li>setting
+                    <span class="material-symbols-outlined">
+                        settings
+                    </span>
+                </li>
+            </ul>
+            
+            
+            <div class="bottom_sidebar">
+                <p>unlock more powerful feature</p>
+                <button>upgrade to pro</button>
+            </div>
+
+
+        </aside>
+
+
+
+        <main class="main">
+            
+            <div class="header_main">
+                
+                <div class="date">
+                    <input type="date" name="" id="date">
+                </div>
+
+                
+                <div class="input_search">
+                    <div class="input_search_width">
+                        <input type="search" name="" id="search" placeholder="search" autocomplete="off">
+                        <span class="material-symbols-outlined">search</span>
+                    </div>
+                </div>
+
+                
+                <div class="profile">
+
+                    <p><span>+</span>add customer</p>
+
+
+                    <div class="notification_imgpro">
+                        <span class="material-symbols-outlined">notifications</span>
+                        <img src="styles/image/IMG_7824.JPG" alt="">
+                    </div>
+
+                </div>
+
+            </div>
+
+            
+            <div class="main_main">
+
+
+
+                <div class="container_main_main">
+
+
+                   
+                    <div class="ToDoList">
+                        <input type="text" name="" id="input" class="input" autocomplete="off">
+                        <button class="button">add</button>
+                    </div>
+    
+                    
+                    
+                    <div class="list_ToDoList">
+
+                        <ul class="ul_list_ToDoList">
+
+                     
+                        </ul>
+                    </div>
+
+
+
+                </div>
+
+
+
+            </div>
+
+
+        </main>
+    </div>
     <script src="app/script.js"></script>
 </body>
 </html>

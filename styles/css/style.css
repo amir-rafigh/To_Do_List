@@ -1,3 +1,363 @@
+@charset "UTF-8";
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
 
+body {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: gray;
+}
+
+.container {
+  max-width: 1840px;
+  max-height: 999px;
+  width: 100%;
+  height: 100%;
+  background-color: red;
+  display: grid;
+  grid-template-columns: 20% 80%;
+  text-transform: capitalize;
+}
+.container aside {
+  background-color: #ff4669;
+  display: grid;
+  grid-template-rows: 20% 50% 30%;
+  font-family: "Satisfy", cursive;
+  font-weight: 400;
+  font-style: normal;
+}
+.container aside .top_sidebar {
+  text-align: left;
+  padding: 1rem;
+  text-transform: capitalize;
+}
+.container aside .top_sidebar h1 {
+  padding-top: 1rem;
+  padding-bottom: 0.5rem;
+  text-transform: uppercase;
+  color: #fffafb;
+}
+.container aside .top_sidebar p {
+  color: #fffafb;
+}
+.container aside ul {
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+  list-style-type: none;
+  color: #ffc3cd;
+}
+.container aside ul li {
+  padding: 1rem;
+  padding-left: 1rem;
+  display: flex;
+  align-items: center;
+  flex-direction: row-reverse;
+  justify-content: start;
+  column-gap: 0.5rem;
+  user-select: none;
+  transition: 0.3s;
+  -webkit-transition: 0.3s;
+  -moz-transition: 0.3s;
+  -ms-transition: 0.3s;
+  -o-transition: 0.3s;
+  cursor: pointer;
+}
+.container aside ul li:hover {
+  background-color: #af0e2b;
+  color: #ffffff;
+}
+.container aside .bottom_sidebar {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  row-gap: 0.5rem;
+}
+.container aside .bottom_sidebar p {
+  font-size: 12px;
+  color: #fffafb;
+}
+.container aside .bottom_sidebar button {
+  padding: 0.5rem;
+  text-transform: capitalize;
+  border-radius: 1rem;
+  -webkit-border-radius: 1rem;
+  -moz-border-radius: 1rem;
+  -ms-border-radius: 1rem;
+  -o-border-radius: 1rem;
+  outline: none;
+  border: none;
+  background-color: #fffafb;
+  color: #ff4669;
+  font-family: "Satisfy", cursive;
+  font-weight: 700;
+  font-style: normal;
+  cursor: pointer;
+}
+.container main {
+  background-color: green;
+  display: grid;
+  grid-template-rows: 10% 90%;
+}
+.container main .header_main {
+  background-color: #ffffff;
+  display: grid;
+  grid-template-columns: 20% 50% 30%;
+  cursor: pointer;
+}
+.container main .header_main .date {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.container main .header_main .date input {
+  width: 90%;
+  height: 60%;
+  font-family: "Satisfy", cursive;
+  border: none;
+  padding: 0.5rem;
+  padding-left: 1rem;
+  border-radius: 2rem;
+  -webkit-border-radius: 2rem;
+  -moz-border-radius: 2rem;
+  -ms-border-radius: 2rem;
+  -o-border-radius: 2rem;
+  color: #f33f60;
+  font-weight: 700;
+  background-color: #f5f5f5;
+  cursor: pointer;
+  user-select: none;
+}
+.container main .header_main .input_search {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.container main .header_main .input_search .input_search_width {
+  width: 100%;
+  height: 60%;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.container main .header_main .input_search .input_search_width input {
+  border-radius: 2rem;
+  -webkit-border-radius: 2rem;
+  -moz-border-radius: 2rem;
+  -ms-border-radius: 2rem;
+  -o-border-radius: 2rem;
+  width: 100%;
+  height: 100%;
+  background-color: #f5f5f5;
+  padding: 0.5rem 0;
+  padding-left: 3rem;
+  padding-right: 1rem;
+  border: none;
+  font-size: 1.5rem;
+  font-family: "Satisfy", cursive;
+  outline: none;
+  cursor: pointer;
+}
+.container main .header_main .input_search .input_search_width span {
+  position: absolute;
+  left: 10px;
+  top: 11px;
+  font-size: 32px;
+}
+.container main .header_main .profile {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.container main .header_main .profile p {
+  width: 65%;
+  color: #f33f60;
+  font-weight: 700;
+  text-transform: uppercase;
+  font-family: "Satisfy", cursive;
+  padding-left: 0.5rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  column-gap: 0.3rem;
+}
+.container main .header_main .profile p span {
+  font-size: 2rem;
+  padding-bottom: 0.3rem;
+}
+.container main .header_main .profile .notification_imgpro {
+  width: 35%;
+  height: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  column-gap: 10px;
+  padding: 0.5rem;
+}
+.container main .header_main .profile .notification_imgpro span:hover {
+  color: orange;
+}
+.container main .header_main .profile .notification_imgpro img {
+  width: 40px;
+  height: 40px;
+  border-radius: 100%;
+  -webkit-border-radius: 100%;
+  -moz-border-radius: 100%;
+  -ms-border-radius: 100%;
+  -o-border-radius: 100%;
+}
+.container main .main_main {
+  background-color: #ececec;
+  padding: 2rem;
+}
+.container main .main_main .container_main_main {
+  width: 100%;
+  height: 100%;
+  background-color: #fff;
+}
+.container main .main_main .ToDoList {
+  margin: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 10%;
+}
+.container main .main_main .ToDoList input {
+  width: 60%;
+  height: 70%;
+  border: none;
+  background-color: #ececec;
+  border-radius: 1rem 0 0rem 1rem;
+  -webkit-border-radius: 1rem 0 0rem 1rem;
+  -moz-border-radius: 1rem 0 0rem 1rem;
+  -ms-border-radius: 1rem 0 0rem 1rem;
+  -o-border-radius: 1rem 0 0rem 1rem;
+  padding-left: 1rem;
+  font-size: 1.5rem;
+  font-family: "Satisfy", cursive;
+  outline: none;
+  border: 2px solid black;
+  border-right: none;
+  text-transform: capitalize;
+}
+.container main .main_main .ToDoList button {
+  border: 2px solid black;
+  border-left: none;
+  width: 20%;
+  height: 70%;
+  background-color: #fff;
+  border-radius: 0 1rem 1rem 0;
+  -webkit-border-radius: 0 1rem 1rem 0;
+  -moz-border-radius: 0 1rem 1rem 0;
+  -ms-border-radius: 0 1rem 1rem 0;
+  -o-border-radius: 0 1rem 1rem 0;
+  text-transform: capitalize;
+  font-size: 1.5rem;
+  font-family: "Satisfy", cursive;
+  outline: none;
+  cursor: pointer;
+  transition: 0.5s;
+  -webkit-transition: 0.5s;
+  -moz-transition: 0.5s;
+  -ms-transition: 0.5s;
+  -o-transition: 0.5s;
+}
+.container main .main_main .ToDoList button:hover {
+  background-color: #ff4669;
+  color: white;
+}
+.container main .main_main .list_ToDoList {
+  margin: auto;
+  width: 85%;
+  max-height: 80%;
+  overflow-y: auto;
+  height: 100%;
+  margin-top: 1rem;
+  border-radius: 1rem;
+  -webkit-border-radius: 1rem;
+  -moz-border-radius: 1rem;
+  -ms-border-radius: 1rem;
+  -o-border-radius: 1rem;
+}
+.container main .main_main .list_ToDoList ul {
+  list-style-type: none;
+}
+.container main .main_main .list_ToDoList ul li {
+  position: relative;
+  border-bottom: 1px solid black;
+  padding: 1rem;
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: #f11840;
+  width: 100%;
+  height: 100%;
+  transition: 0.3s;
+  -webkit-transition: 0.3s;
+  -moz-transition: 0.3s;
+  -ms-transition: 0.3s;
+  -o-transition: 0.3s;
+}
+.container main .main_main .list_ToDoList ul li:hover {
+  background-color: #c7c7c7;
+}
+.container main .main_main .list_ToDoList ul .li_done {
+  text-decoration: line-through;
+  background-color: rgb(142, 238, 142);
+}
+.container main .main_main .list_ToDoList ul .li_done:hover {
+  background-color: rgb(142, 238, 142);
+}
+.container main .main_main .list_ToDoList ul .done::before {
+  content: "";
+  width: 8px;
+  height: 23px;
+  border-width: 0px 5px 5px 0px;
+  border-style: solid;
+  border-color: #2f672f;
+  display: inline-block;
+  position: absolute;
+  bottom: 20px;
+  right: 45px;
+  transform: rotateZ(45deg);
+  -webkit-transform: rotateZ(45deg);
+  -moz-transform: rotateZ(45deg);
+  -ms-transform: rotateZ(45deg);
+  -o-transform: rotateZ(45deg);
+  cursor: pointer;
+}
+.container main .main_main .list_ToDoList ul .done.done_close::before {
+  display: none;
+}
+.container main .main_main .list_ToDoList ul .done.done_close::after {
+  content: "\e5cd"; /* کد یونیکد آیکون close */
+  font-family: "Material Icons"; /* تنظیم فونت به Material Icons */
+  font-size: 30px; /* اندازه دلخواه */
+  color: #ff0000; /* رنگ دلخواه برای ضربدر */
+  display: inline-block;
+  position: absolute;
+  bottom: 15px;
+  right: 45px;
+}
+.container main .main_main .list_ToDoList ul .fa-trash {
+  position: absolute;
+  right: 10px;
+  color: gray;
+  transition: 0.3s;
+  -webkit-transition: 0.3s;
+  -moz-transition: 0.3s;
+  -ms-transition: 0.3s;
+  -o-transition: 0.3s;
+  cursor: pointer;
+}
+.container main .main_main .list_ToDoList ul .fa-trash:hover {
+  color: red;
+}
 
 /*# sourceMappingURL=style.css.map */

@@ -1,0 +1,32 @@
+@mixin transition($transition){
+    transition: $transition;
+    -webkit-transition: $transition;
+    -moz-transition: $transition;
+    -ms-transition: $transition;
+    -o-transition: $transition;
+}
+
+
+@mixin border-radius($border){
+    border-radius: $border;
+    -webkit-border-radius: $border;
+    -moz-border-radius: $border;
+    -ms-border-radius: $border;
+    -o-border-radius: $border;
+}
+@mixin border-radius_sides($top_left , $top_right , $bottom_right , $bottom_left){
+    border-radius: $top_right $top_left $bottom_right $bottom_left;
+    -webkit-border-radius: $top_right $top_left $bottom_right $bottom_left;
+    -moz-border-radius: $top_right $top_left $bottom_right $bottom_left;
+    -ms-border-radius: $top_right $top_left $bottom_right $bottom_left;
+    -o-border-radius: $top_right $top_left $bottom_right $bottom_left;
+
+}
+
+@mixin transform($transform){
+    transform: rotateZ($transform);
+    -webkit-transform: rotateZ($transform);
+    -moz-transform: rotateZ($transform);
+    -ms-transform: rotateZ($transform);
+    -o-transform: rotateZ($transform);
+}
