@@ -1,4 +1,5 @@
 @import "mixin";
+@import "change-theme";
 *{
     padding: 0;
     margin: 0;
@@ -6,7 +7,6 @@
 
 }
 body{
-    // width: 100vw;
     height: 100vh;
     display: flex;
     justify-content: center;
@@ -18,10 +18,10 @@ body{
     max-height: 999px;
     width: 100%;
     height: 100%;
-    background-color: red;
     display: grid;
     grid-template-columns: 20% 80%;
     text-transform: capitalize;
+    padding: 1rem;
 
 
     aside{
@@ -35,7 +35,6 @@ body{
 
 
         .top_sidebar{
-            // background-color: purple;
             text-align: left;
             padding: 1rem;
             text-transform: capitalize;
@@ -55,7 +54,6 @@ body{
 
 
         ul{
-            // background-color: orange;
             display: flex;
             flex-direction: column;
             justify-content: start;
@@ -64,10 +62,8 @@ body{
             
             
             li{
-                // background-color: blue;
                 padding: 1rem;
                 padding-left: 1rem;
-                // margin: 8px;
                 display: flex;
                 align-items: center;
                 flex-direction: row-reverse;
@@ -88,7 +84,6 @@ body{
             
         }
         .bottom_sidebar{
-            // background-color: lightblue;
             display: flex;
             flex-direction: column;
             justify-content: center;
@@ -129,7 +124,7 @@ body{
 
 
     main{
-        background-color: green;
+        // background-color: green;
         display: grid;
         grid-template-rows: 10% 90%;
 
@@ -138,18 +133,17 @@ body{
         .header_main{
             background-color: #ffffff;
             display: grid;
-            grid-template-columns: 20% 50% 30%;
+            grid-template-columns: 20% 60% 10% 10%;
             cursor: pointer;
 
 
 
 
             .date{
-                // background-color: yellow;
                 display: flex;
                 justify-content: center;
                 align-items: center;
-
+                
                 input{
                     width: 90%;
                     height: 60%;
@@ -161,26 +155,24 @@ body{
                     color: #f33f60;
                     font-weight: 700;
                     background-color: #f5f5f5;
-                    // box-shadow: 0px 0px 20px 0.1px black;
-                    cursor: pointer;
                     user-select: none;
+                    cursor: pointer;
+                }
+                input::-webkit-calendar-picker-indicator {
+                    cursor: pointer;
                 }
 
             }
             
             .input_search{
-                // background-color: red;
                 display: flex;
                 justify-content: center;
                 align-items: center;
-                // padding: 1rem;
                 
                 .input_search_width{
                     width: 100%;
-                    // height: 50px;
                     height: 60%;
                     position: relative;
-                    // background-color: #fff;
                     display: flex;
                     justify-content: center;
                     align-items: center;
@@ -213,38 +205,73 @@ body{
 
 
             }
-            
-            .profile{
-                // background-color: rgb(255, 255, 255);
+            .change-theme{                
+                // background-color: red;
                 display: flex;
-                justify-content: space-between;
+                justify-content: center;
                 align-items: center;
 
-                p{
-                    width: 65%;
-                    color: #f33f60;
-                    font-weight: 700;
-                    text-transform: uppercase;
-                    font-family: "Satisfy", cursive;
-                    padding-left: 0.5rem;
-                    // line-height: ;
-                    display: flex;
-                    justify-content: center;
-                    align-items: center;
-                    column-gap: 0.3rem;
-                    span{
-                        font-size: 2rem;
-                        padding-bottom: 0.3rem;
-                    }
-                    
-                }
-
-                .notification_imgpro{
-                    width: 35%;
-                    height: 100%;
-                    // background-color: green;
+                .container-change-theme{
+                    width: 65px;
+                    height: 32px;
+                    background-color: rgb(255, 255, 255);
+                    @include border-radius(60px);
                     display: flex;
                     justify-content: space-between;
+                    align-items: center;
+                    position: relative;
+                    box-shadow: 0 0 10px 1px black;
+
+                    span{
+                        width: 30px;
+                        height: 30px;
+                        background-color: rgb(0, 0, 0);
+                        @include border-radius(50%);
+                        position: absolute;
+                        left: 1px;
+                        @include transition(0.5s);
+                    }
+                    .dark{
+                        position: absolute;
+                        left: 34px;
+                        background-color: white;
+                        
+                    }
+
+                }
+                .container-dark{
+                    background-color: black;
+                }
+
+            }
+            
+            .profile{
+               
+
+                // p{
+                //     width: 65%;
+                //     color: #f33f60;
+                //     font-weight: 700;
+                //     text-transform: uppercase;
+                //     font-family: "Satisfy", cursive;
+                //     padding-left: 0.5rem;
+                //     // line-height: ;
+                //     display: flex;
+                //     justify-content: center;
+                //     align-items: center;
+                //     column-gap: 0.3rem;
+                //     span{
+                //         font-size: 2rem;
+                //         padding-bottom: 0.3rem;
+                //     }
+                    
+                // }
+
+                .notification_imgpro{
+                    width: 100%;
+                    height: 100%;
+                    display: flex;
+                    justify-content: center;
                     align-items: center;
                     column-gap: 10px;
                     padding: 0.5rem;
@@ -278,21 +305,15 @@ body{
                 width: 100%;
                 height: 100%;
                 background-color: #fff;
-                // padding: 1rem;
             }
             
             
             .ToDoList{
-                // background-color: red;
-                // width: 60%;
                 margin: auto;
                 display: flex;
                 justify-content: center;
                 align-items: center;
-                // margin-top: 1rem;
                 height: 10%;
-                // box-shadow: 0 0 10px 1px black;
-                // @include border-radius(1rem);
                 
                 
                 
@@ -336,14 +357,9 @@ body{
                 width: 85%;
                 max-height: 80%;
                 overflow-y: auto;
-                height: 100%;
-                // display: flex;
-                // justify-content: center;
-                // align-items: center;
+                height: 100%;            
                 margin-top: 1rem;                
-                // background-color: #ececec;
                 @include border-radius(1rem);
-                // padding: 1rem;
                 
 
 
@@ -353,25 +369,24 @@ body{
                     li{
                         position: relative;
                         border-bottom: 1px solid black;
-                        // margin-bottom: 2rem;
-                        padding: 1rem;
+                        padding-top: 1.5rem;
                         font-size: 1.5rem;
                         font-weight: 700;
                         color: #f11840;
-                        // background-color: blue;
                         width: 100%;
                         height: 100%;
                         @include transition(0.3s);
+                        padding-left: 0.2rem;
                     }
                     li:hover{
                         background-color: #c7c7c7;
                     }
                     .li_done{
                         text-decoration: line-through;
-                        background-color: rgb(142, 238, 142);
+                        background-color: rgb(203, 253, 203);
                     }
                     .li_done:hover{
-                        background-color: rgb(142, 238, 142);
+                        background-color: rgb(203, 253, 203);
                     }
                     .done::before{
                         content: "";
@@ -382,7 +397,7 @@ body{
                         border-color: #2f672f;
                         display: inline-block;
                         position: absolute;
-                        bottom: 20px;
+                        bottom: 5px;
                         right: 45px;
                         @include transform(45deg);
                         cursor: pointer;
@@ -398,8 +413,9 @@ body{
                         color: #ff0000; /* رنگ دلخواه برای ضربدر */
                         display: inline-block;
                         position: absolute;
-                        bottom: 15px;
+                        bottom: 2px;
                         right: 45px;
+                        cursor: pointer;
 
                     }
                     .fa-trash{
@@ -415,10 +431,14 @@ body{
 
                     
                 }
+                .change-theme-li-done{
+                    color: $sidebar-background !important;
+                }
               
 
             }
         }
     }
+
 
 }

@@ -1,7 +1,13 @@
 const button = document.querySelector('.button');
 const input =document.querySelector(".input");
 const ul = document.querySelector('.ul_list_ToDoList');
-const done = document.querySelector('.done')
+const done = document.querySelector('.done');
+const change_theme = document.querySelector(".span-change-theme");
+const sidebar = document.querySelector('aside');
+const header_main = document.querySelector('.header_main');
+const container_main = document.querySelector('.container_main_main');
+const li  = document.querySelector('.li_done');
+
 
 
 window.addEventListener('load' , ()=>{
@@ -47,7 +53,8 @@ ul.addEventListener('click' , (x)=>{
     }
     if(x.target.nodeName === "DIV"){
         x.target.parentElement.classList.toggle('li_done');
-        x.target.classList.toggle('done_close');
+        x.target.classList.toggle('done_close');    
+
 
 
         
@@ -56,3 +63,24 @@ ul.addEventListener('click' , (x)=>{
     }
 
 })
+
+change_theme.addEventListener('click' , (x)=>{
+    const chenge_theme = x.target
+    chenge_theme.classList.toggle('dark');
+   chenge_theme.parentElement.classList.toggle('container-dark');
+   sidebar.classList.toggle('change-theme-sidebar');
+   sidebar.firstElementChild.classList.toggle('change-theme-top-sidebar');
+   document.body.classList.toggle('change-theme-body');
+   header_main.classList.toggle('header-main-sidebar');
+   container_main.classList.toggle('container_main_sidebar');
+   
+
+    ul.addEventListener('click' , (x)=>{
+        if(x.target.nodeName==="DIV"){
+           x.target.parentElement.classList.toggle("change-theme-li-done");
+        }
+
+    })
+
+})
+
