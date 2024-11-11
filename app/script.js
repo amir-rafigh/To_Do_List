@@ -7,6 +7,8 @@ const sidebar = document.querySelector('aside');
 const header_main = document.querySelector('.header_main');
 const container_main = document.querySelector('.container_main_main');
 const li  = document.querySelector('.li_done');
+const notification = document.querySelector('.material-symbols-outlined');
+const main_main = document.querySelector('.main_main');
 
 
 
@@ -19,13 +21,18 @@ window.addEventListener('load' , ()=>{
 
 
 button.addEventListener('click' , ()=>{
-    const value = input.value
-    const arraylist = JSON.parse(localStorage.getItem("keylist")) || [];
-    arraylist.push(input.value);
-    console.log(arraylist)
-    localStorage.setItem("keylist" , JSON.stringify(arraylist));
-    creatli(value);
-    input.value = ""
+    if(input.value===""){
+       window.alert('Please fill out the form first')
+    }
+    else{
+        const value = input.value
+        const arraylist = JSON.parse(localStorage.getItem("keylist")) || [];
+        arraylist.push(input.value);
+        console.log(arraylist)
+        localStorage.setItem("keylist" , JSON.stringify(arraylist));
+        creatli(value);
+        input.value = ""
+    }
 
 })
 
@@ -53,18 +60,12 @@ ul.addEventListener('click' , (x)=>{
     }
     if(x.target.nodeName === "DIV"){
         x.target.parentElement.classList.toggle('li_done');
-        x.target.classList.toggle('done_close');    
-
-
-
-        
-
-        
+        x.target.classList.toggle('done_close');        
     }
 
 })
 
-change_theme.addEventListener('click' , (x)=>{
+change_theme.addEventListener('click' , (x)=>{    
     const chenge_theme = x.target
     chenge_theme.classList.toggle('dark');
    chenge_theme.parentElement.classList.toggle('container-dark');
@@ -73,14 +74,32 @@ change_theme.addEventListener('click' , (x)=>{
    document.body.classList.toggle('change-theme-body');
    header_main.classList.toggle('header-main-sidebar');
    container_main.classList.toggle('container_main_sidebar');
+   main_main.classList.toggle('main_main_sidebar');
+   
    
 
     ul.addEventListener('click' , (x)=>{
         if(x.target.nodeName==="DIV"){
-           x.target.parentElement.classList.toggle("change-theme-li-done");
+            console.log(true)
+        //    x.target.parentElement.classList.toggle("change-theme-li-done");
+        //    x.target.parentElement.style = "color : black !important;"
         }
 
     })
 
 })
 
+
+// document.addEventListener("DOMContentLoaded", function() {
+//     const date = document.querySelector('.date');
+//     console.log(date)
+//     const mediumScreen = window.matchMedia("(max-width: 999px)");
+
+//     function handleMediumScreen(x) {     
+//             date.placeholder = "Date";
+        
+//     }
+
+//     mediumScreen.addEventListener("change", handleMediumScreen);
+//     handleMediumScreen(mediumScreen);
+// });

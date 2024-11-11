@@ -1,8 +1,6 @@
-.change-theme-body{
-    // background-color: $background-color !important;
-}
+
 .change-theme-sidebar{
-    background-color: $sidebar-background !important;
+    background-color: #242424 !important;
     .change-theme-top-sidebar{
         p{
             color: $text-color !important;
@@ -24,23 +22,37 @@
             color: $text-color !important;
         }
         button{
-            color: #b3004c !important;
+            background-color: #121212 !important;
+               color: #E0E0E0 !important;
         }
     }
-   
+    
 }
 
 .header-main-sidebar{
-    background-color: $sidebar-background !important;
+    background-color: #242424 !important;
+    
+    .profile{
+        .notification_imgpro{
+            span{
+                color: white;
+            }
+        }
+    }
+}
+
+
+.main_main_sidebar{
+    background-color: #121212 !important;
 }
 
 .container_main_sidebar{
-    background-color: $sidebar-background !important;
+    background-color: #242424 !important;
     .list_ToDoList{
         ul{
             li{
                 color: white !important;
-
+                
                 .fa-trash{
                     color: rgb(255, 255, 255) !important;
                 }
@@ -49,10 +61,20 @@
                 }
                 
             }
+            .li_done{
+                background-color: #03DAC5 !important;
+                color: black !important;
+            }
             li:hover{
-                background-color: transparent !important;
+                background-color: #03dac541 !important;
+
 
             }
         }
     }
+}
+
+.change-theme-li-done{
+    // color: black !important;
+    
 }

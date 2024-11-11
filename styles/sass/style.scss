@@ -1,5 +1,6 @@
 @import "mixin";
 @import "change-theme";
+@import "responsive";
 *{
     padding: 0;
     margin: 0;
@@ -21,7 +22,6 @@ body{
     display: grid;
     grid-template-columns: 20% 80%;
     text-transform: capitalize;
-    padding: 1rem;
 
 
     aside{
@@ -31,6 +31,8 @@ body{
         font-family: "Satisfy", cursive;
         font-weight: 400;
         font-style: normal;
+        max-height: 1000px;
+        @include transition(0.3s);
 
 
 
@@ -56,9 +58,8 @@ body{
         ul{
             display: flex;
             flex-direction: column;
-            justify-content: start;
+            justify-content: space-around;
             list-style-type: none;
-            color: #ffc3cd;
             
             
             li{
@@ -72,6 +73,7 @@ body{
                 user-select: none;
                 @include transition(0.3s);
                 cursor: pointer;
+                color: white;
                 
                 
             }
@@ -126,7 +128,8 @@ body{
     main{
         // background-color: green;
         display: grid;
-        grid-template-rows: 10% 90%;
+        grid-template-rows: 10% 90%;        
+        max-height: 1000px;
 
 
 
@@ -137,7 +140,9 @@ body{
             cursor: pointer;
 
 
-
+            .bar{
+                display: none;
+            }
 
             .date{
                 display: flex;
@@ -152,7 +157,7 @@ body{
                     padding: 0.5rem;
                     padding-left: 1rem;
                     @include border-radius(2rem);
-                    color: #f33f60;
+                    color: #000;
                     font-weight: 700;
                     background-color: #f5f5f5;
                     user-select: none;
@@ -212,35 +217,62 @@ body{
                 align-items: center;
 
                 .container-change-theme{
-                    width: 65px;
-                    height: 32px;
-                    background-color: rgb(255, 255, 255);
-                    @include border-radius(60px);
-                    display: flex;
-                    justify-content: space-between;
-                    align-items: center;
-                    position: relative;
-                    box-shadow: 0 0 10px 1px black;
+                    // width: 60px;
+                    // height: 25px;
+                    // background-color: rgb(255, 255, 255);
+                    // @include border-radius(60px);
+                    // position: relative;
+                    // box-shadow: 0 0 10px 1px black;
+                    // padding: 1px;
 
+                 
                     span{
-                        width: 30px;
-                        height: 30px;
-                        background-color: rgb(0, 0, 0);
-                        @include border-radius(50%);
-                        position: absolute;
-                        left: 1px;
-                        @include transition(0.5s);
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
                     }
-                    .dark{
+                    span::before{
+                        content: "\263E";
                         position: absolute;
-                        left: 34px;
-                        background-color: white;
+                        font-size: 3rem;
+                        color: #030e33; /* یا رنگ تیره‌ای که مناسب باشد */
+                        text-shadow: 0 0 5px rgba(0, 0, 0, 1), 
+                                     0 0 10px rgba(0, 0, 139, 1), 
+                                     0 0 15px rgba(0, 0, 139, 1); /* آبی تیره */
+                       
                         
+
+                       
                     }
+                    span::after{
+                        content: "\263C";
+                        position: absolute;
+                        font-size: 3rem;
+                        display: none;
+                        color: #FFD700; /* رنگ طلایی برای خورشید */
+                        text-shadow: 0 0 10px rgba(255, 215, 0, 0.8), 
+                                     0 0 20px rgba(255, 215, 0, 0.6), 
+                                     0 0 30px rgba(255, 165, 0, 0.5), 
+                                     0 0 40px rgba(255, 140, 0, 0.4);
+                    }
+                    span.dark::before{
+                        display: none;
+                    }
+                    span.dark::after{
+                        display: block;
+                    }
+                    // .dark{
+                    //     // position: absolute;
+                    //     // right: 1px !important;
+                    //     // left: 0px !important;
+                    //     background-color: white;
+                    //     float: right;
+                        
+                    // }
 
                 }
                 .container-dark{
-                    background-color: black;
+                    // background-color: black;
                 }
 
             }
@@ -271,10 +303,10 @@ body{
                     width: 100%;
                     height: 100%;
                     display: flex;
-                    justify-content: center;
+                    justify-content: end;
                     align-items: center;
-                    column-gap: 10px;
-                    padding: 0.5rem;
+                    column-gap: 20px;
+                    // padding: 0.5rem;
 
 
                     span:hover{
@@ -372,21 +404,20 @@ body{
                         padding-top: 1.5rem;
                         font-size: 1.5rem;
                         font-weight: 700;
-                        color: #f11840;
+                        color:black;
                         width: 100%;
                         height: 100%;
                         @include transition(0.3s);
                         padding-left: 0.2rem;
+                        font-family: "Satisfy", cursive;
                     }
-                    li:hover{
-                        background-color: #c7c7c7;
-                    }
+                   
                     .li_done{
                         text-decoration: line-through;
-                        background-color: rgb(203, 253, 203);
+                        background-color: rgb(1 175 58 / 58%);
                     }
-                    .li_done:hover{
-                        background-color: rgb(203, 253, 203);
+                    li:hover , .li_done:hover{
+                        background-color: rgba(1, 175, 59, 0.358);
                     }
                     .done::before{
                         content: "";
@@ -431,9 +462,7 @@ body{
 
                     
                 }
-                .change-theme-li-done{
-                    color: $sidebar-background !important;
-                }
+               
               
 
             }
