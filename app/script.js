@@ -9,6 +9,7 @@ const container_main = document.querySelector('.container_main_main');
 const li  = document.querySelector('.li_done');
 const notification = document.querySelector('.material-symbols-outlined');
 const main_main = document.querySelector('.main_main');
+const bar = document.querySelector(".bar");
 
 
 
@@ -54,7 +55,6 @@ ul.addEventListener('click' , (x)=>{
         const li_textname =  x.target.parentElement;
         li_textname.style = "display:none";
         const array = getitemlocal();
-        // console.log(array.indexOf(array_name));
         array.splice(array.indexOf(li_textname.innerText) , 1)
         localStorage.setItem("keylist" , JSON.stringify(array));
     }
@@ -75,31 +75,12 @@ change_theme.addEventListener('click' , (x)=>{
    header_main.classList.toggle('header-main-sidebar');
    container_main.classList.toggle('container_main_sidebar');
    main_main.classList.toggle('main_main_sidebar');
+   bar.classList.toggle('bar_dark');
    
    
 
-    ul.addEventListener('click' , (x)=>{
-        if(x.target.nodeName==="DIV"){
-            console.log(true)
-        //    x.target.parentElement.classList.toggle("change-theme-li-done");
-        //    x.target.parentElement.style = "color : black !important;"
-        }
-
-    })
+   
 
 })
 
 
-// document.addEventListener("DOMContentLoaded", function() {
-//     const date = document.querySelector('.date');
-//     console.log(date)
-//     const mediumScreen = window.matchMedia("(max-width: 999px)");
-
-//     function handleMediumScreen(x) {     
-//             date.placeholder = "Date";
-        
-//     }
-
-//     mediumScreen.addEventListener("change", handleMediumScreen);
-//     handleMediumScreen(mediumScreen);
-// });

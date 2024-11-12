@@ -79,7 +79,6 @@
     }
     .main{
         .header_main{
-            // grid-template-columns:10% 50% 15% 25% !important;
             display: flex !important;
             justify-content: space-between;
             align-items: center;
@@ -87,7 +86,6 @@
                 width: 50%;
             }
             .pro_ch_bar{
-                // width: 50%;                
                 display: flex;
                 justify-content: end;
                 padding-right: 0.5rem;
@@ -105,7 +103,7 @@
                     }
                 }
                 .bar{
-                    width: auto !important;
+                    width: 100% !important;
                 }
 
             }
