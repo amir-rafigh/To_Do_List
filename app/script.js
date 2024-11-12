@@ -14,6 +14,9 @@ const bar = document.querySelector(".bar");
 
 
 window.addEventListener('load' , ()=>{
+    for( item of getitemlocal()){
+        creatli(item);
+    }
     
     const smartmobile = window.matchMedia("(max-width:811px)");
     smartmobile.addEventListener('change' , handlesmartmobile);
@@ -50,18 +53,15 @@ window.addEventListener('load' , ()=>{
 
     function removePCB(){
         const PCB = document.querySelector('.pro_ch_bar')
-        const profile = PCB.querySelector('.profile');
-        const change_theme = PCB.querySelector('.change-theme');
-        const bar = PCB.querySelector(".bar");
+        const profile = document.querySelector('.profile');
+        const change_theme = document.querySelector('.change-theme');
+        const bar = document.querySelector(".bar");
         header_main.appendChild(profile)
         header_main.appendChild(change_theme)
         header_main.appendChild(bar)
         PCB.remove();
 
 
-    }
-    for( item of getitemlocal()){
-        creatli(item);
     }
 
 })
